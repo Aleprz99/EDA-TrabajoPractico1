@@ -13,9 +13,7 @@ int main(){
 		if(i==0){
 			min=vector[i];
 		}else{
-			if(min>vector[i]){
-				min=vector[i];
-			}
+			if(min>vector[i])min=vector[i];
 		}
 	}
 	printf("--------------------------\nEl menor numero del arreglo es: %d\nPresione cualquier tecla para salir",min);
