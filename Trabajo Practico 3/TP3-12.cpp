@@ -30,7 +30,7 @@ int main(){
 		cin>>persona[i].nombre;
 		cout<<"¿La persona tiene alguna discapacidad?"<<endl<<"<Y> Si // <N> No"<<endl;
 		cin>>opc;
-		while(opc != 'Y' || opc != 'N'){
+		while(opc != 'Y' && opc != 'N'){
 			cout<<"Ingrese una opcion valida"<<endl;
 			cin>>opc;
 		}
@@ -42,15 +42,15 @@ int main(){
 		}
 	}
 	char persona_disc[disc][20];
-	char personas_ndisc[n-disc][20];
+	char persona_ndisc[n-disc][20];
 	int j=0;
 	int k=0;
 	for(int i=0;i<n;i++){
 		if(persona[i].discapacidad){
-			strcpy(persona[i].nombre,persona_disc[j]);
+			strcpy(persona_disc[j],persona[i].nombre);
 			j++;
 		}else{
-			strcpy(persona[i].nombre,persona_ndisc[k]);
+			strcpy(persona_ndisc[k],persona[i].nombre);
 			k++;
 		}
 	}
